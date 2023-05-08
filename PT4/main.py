@@ -1,5 +1,5 @@
 try:
-    print("Compute Total Odds || 1\nPalindrome || 2")
+    print("1 || Compute Total Odds\n2 || Palindrome\n3 || Exit")
     input_module = int(input("Enter module number: ").strip())
 
     if input_module == 1:
@@ -8,10 +8,9 @@ try:
         user_input = int(input("\nEnter a number: ").strip())
 
         result = function(user_input)
-        print(result[-1])
 
         file = open("Compute_Total_Odd.txt", "w")
-        file.write("Input: {}\nOdd Numbers: {}\nTotal: {}.".format(result[0], result[1], result[2]))
+        file.write("Input: {}\n\nOdd Numbers: {}\n\nTotal: {}".format(result[0], result[1], result[-1]))
         file.close()
 
         file = open("Compute_Total_Odd.txt", "r")
@@ -27,16 +26,19 @@ try:
         result = function(user_input)
 
         file = open("Palindrome.txt", "w")
-        file.write("Input: {}\n{}\nThe last three characters are {}.".format(result[0],result[1],result[2]))
+        file.write("Input: {}\n\n{}\n\nThe last three characters are {}.".format(result[0],result[1],result[2]))
         file.close()
 
         file = open("Palindrome.txt", "r")
         print("\n" + file.read())
         file.close()
 
+    elif input_module == 3:
+        quit()
+
     else: 
-        print("Invalid input.")
+        print("\nInvalid input.")
 
 
 except ValueError:
-    print("Invalid input.")
+    print("\nInvalid input.")

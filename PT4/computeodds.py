@@ -2,13 +2,11 @@ def totalOdds(num):
     computer = lambda a : 0 if a <= 0 else a + (computer(a-2)) 
 
     if num % 2 == 0:
-        total_value = function(num-1)
-
+        total_value = totalOdds(num-1)
     else: 
         total_value = computer(num)
  
-    print(total_value)
-    return str(total_value)
+    return total_value
 
 
 def function(num):
@@ -20,4 +18,4 @@ def function(num):
             else:
                 odd_numbers = odd_numbers + str(n) + ", "
 
-    return str(num), odd_numbers, totalOdds(num)
+    return str(num), odd_numbers, str(totalOdds(num))
