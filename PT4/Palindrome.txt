@@ -1,0 +1,3 @@
+Input: civic
+Civic is a palindrome.
+The last three characters are vic.
